@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaySpaceDev - Creative Developer & BD Plugin Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container header-nav">
+            <a href="#home" class="logo">
+                <img src="mayspacedev.jpg" alt="MaySpaceDev Logo" class="logo-icon" />
+                <span>MaySpaceDev</span>
+            </a>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#plugins">Plugins</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="floating-star"></div>
+        <div class="floating-star"></div>
+        <div class="floating-star"></div>
+        <div class="floating-star"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm May <i class="fa-light fa-planet-ringed"></i></h1>
+                <p class="hero-subtitle">A creative developer crafting tools for directories and beyond.</p>
+                <p class="hero-description">Personal plugins, custom solutions, and a touch of digital magic.</p>
+                <div class="hero-actions">
+                    <a href="#plugins" class="cta-button"><i class="fas fa-puzzle-piece"></i> Explore Plugins</a>
+                    <a href="#contact" class="cta-button secondary"><i class="fas fa-rocket"></i> Let's Work Together</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="plugins" id="plugins">
+        <div class="container">
+            <h2 class="section-title">Brilliant Directories Plugins</h2>
+            <p class="section-subtitle">Powerful tools to enhance your directory website with beautiful, functional features.</p>
+            
+            <div class="plugins-grid">
+                <div class="plugin-card">
+                    <img src="1.png" alt="Smart Directory Importer" class="plugin-image">
+                    <h3>Smart Directory Importer</h3>
+                    <p>Easily fill your directory with thousands of listings, complete with key details, photos, and reviews. Use powerful search filters to find and import businesses from anywhere in the world — all with one essential plugin.</p>
+                    <div class="plugin-price">$1000</div>
+                    <div class="plugin-actions">
+                        <a href="#contact" class="plugin-button demo"><i class="fas fa-eye"></i>Get Info</a>
+                        <a href="#contact" class="plugin-button buy"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+                    </div>
+                </div>
+                
+                <div class="plugin-card">
+                    <img src="2.png" alt="LinkedListing" class="plugin-image">
+                    <h3>LinkedListing</h3>
+                    <p>Allow your members to add their LinkedIn profile, and automatically generate a professional listing description based on their work experience.</p>
+                    <div class="plugin-price">$800</div>
+                    <div class="plugin-actions">
+                        <a href="#contact" class="plugin-button demo"><i class="fas fa-eye"></i>Get Info</a>
+                        <a href="#contact" class="plugin-button buy"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+                    </div>
+                </div>
+                
+                <div class="plugin-card">
+                    <img src="3.png" alt="Dynamic Search Fields" class="plugin-image">
+                    <h3>Dynamic Search Fields</h3>
+                    <p>Add custom fields to your members and posts that work with your site's search. Make your directory more dynamic and visually rich with flexible input options.</p>
+                    <div class="plugin-price">$800</div>
+                    <div class="plugin-actions">
+                        <a href="#contact" class="plugin-button demo"><i class="fas fa-eye"></i>Get Info</a>
+                        <a href="#contact" class="plugin-button buy"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+                    </div>
+                </div>
+                
+                <div class="plugin-card">
+                    <img src="4.png" alt="Visual Carousel" class="plugin-image">
+                    <h3>Visual Carousel</h3>
+                    <p>Create image sliders you can place anywhere on your site — from your homepage to service pages — and make any section stand out with dynamic carousels.</p>
+                    <div class="plugin-price">$600</div>
+                    <div class="plugin-actions">
+                        <a href="#contact" class="plugin-button demo"><i class="fas fa-eye"></i>Get Info</a>
+                        <a href="#contact" class="plugin-button buy"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+                    </div>
+                </div>
+                
+                <div class="plugin-card">
+                    <img src="5.png" alt="Member Maps" class="plugin-image">
+                    <h3>Member Maps</h3>
+                    <p>Upgrade your directory with smart, customizable maps. Show specific locations and give members unique map pins based on their membership level.</p>
+                    <div class="plugin-price">$800</div>
+                    <div class="plugin-actions">
+                        <a href="#contact" class="plugin-button demo"><i class="fas fa-eye"></i>Get Info</a>
+                        <a href="#contact" class="plugin-button buy"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+                    </div>
+                </div>
+                
+                <div class="plugin-card">
+                    <img src="6.png" alt="Search Badges Plugin" class="plugin-image">
+                    <h3>Search Badges Plugin</h3>
+                    <p>Show tags on member search results based on their category, membership level, or custom data — making key details stand out at a glance.</p>
+                    <div class="plugin-price">$600</div>
+                    <div class="plugin-actions">
+                        <a href="#contact" class="plugin-button demo"><i class="fas fa-eye"></i>Get Info</a>
+                        <a href="#contact" class="plugin-button buy"><i class="fas fa-shopping-cart"></i>Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2><i class="fas fa-rocket" style="color: var(--color-principal); margin-right: 10px;"></i>About Me</h2>
+                    <p>I'm May, a creative developer from Costa Rica, specializing in solutions for directory platforms. I'm passionate about turning complex ideas into simple, beautiful, and functional web experiences.</p>
+                    <p>In this space, I share my tools and collaborate with brands looking to stand out. Each plugin I create is designed to solve real problems and enhance the experience for both administrators and users.</p>
+                    <p>My approach combines technical functionality with intuitive design, creating solutions that not only work perfectly but also look amazing.</p>
+                </div>
+                <div class="about-image">
+                    <div class="profile-card">
+                        <img src="mayspacedev.jpg" alt="Photo of May" class="profile-avatar">
+                        <div class="profile-name">May</div>
+                        <div class="profile-title">Creative Developer</div>
+                        <div class="profile-location">Costa Rica <i class="fas fa-flag"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Additional Services</h2>
+            <p class="section-subtitle">Beyond selling plugins, I offer personalized services for special projects.</p>
+            
+            <div class="services-list">
+                <div class="service-item">
+                    <h4><i class="fas fa-paint-brush"></i>BD Customization</h4>
+                    <p>Complete customization of your Brilliant Directories site with unique design and special functionalities.</p>
+                </div>
+                <div class="service-item">
+                    <h4><i class="fas fa-laptop-code"></i>Web Design</h4>
+                    <p>Creation of websites from scratch with a focus on user experience and conversion.</p>
+                </div>
+                <div class="service-item">
+                    <h4><i class="fas fa-eye"></i>Visual / UI Optimization</h4>
+                    <p>Enhance the appearance and usability of your existing site with design optimizations.</p>
+                </div>
+                <div class="service-item">
+                    <h4><i class="fas fa-plug"></i>API Integration</h4>
+                    <p>Connect your site with external services and automate processes with custom integrations.</p>
+                </div>
+            </div>
+            
+            <div class="services-cta">
+                <a href="#contact" class="cta-button"><i class="fas fa-rocket"></i>Request a Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Let's Connect</h2>
+                    <p>Have a project in mind? Need help with a plugin? I'd love to hear from you!</p>
+                    
+                    <div class="contact-links">
+                        <a href="mailto:hello@mayspacedev.com"><i class="fas fa-envelope"></i>mayspacedev@gmail.com</a>
+                        <a href="https://discord.com/users/AlyssMare"><i class="fas fa-phone"></i>Discord</a>
+                        <a href="https://x.com/MaySpacedu"><i class="fab fa-x"></i>Twitter</a>
+                        <a href="https://github.com/mayspace_du"><i class="fab fa-github"></i>GitHub</a>
+                        <a href="https://www.instagram.com/mayspace_du/"><i class="fab fa-instagram"></i>Instagram</a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Me a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="project">Project Type</label>
+                            <input type="text" id="project" name="project" placeholder="Plugin, web design, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button"><i class="fas fa-paper-plane"></i>Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Follow Me</h3>
+                    <p><a href="https://x.com/MaySpacedu"><i class="fab fa-x"></i> Twitter </a></p>
+                    <p><a href="https://github.com/mayspace_du"><i class="fab fa-github"></i> GitHub</a></p>
+                    <p><a href="https://www.instagram.com/mayspace_du/"><i class="fab fa-instagram"></i> Instagram</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p>Web Design</p>
+                    <p>Frontend Development</p>
+                    <p>SEO Optimization</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 MaySpaceDev. Made with <i class="fas fa-heart"></i> and lots of coffee.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (header) {
+                    header.classList.toggle('scrolled', window.scrollY > 50);
+                }
+            });
+
+            //  User ID 
+            emailjs.init('wvau8hp3Vcy9Qf_mP');
+
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    //  Service ID y Template ID
+                    emailjs.send('service_btdz3ry', 'template_c1y027u', {
+                        name: this.name.value,
+                        email: this.email.value,
+                        project: this.project.value,
+                        message: this.message.value
+                    })
+                    .then(function(response) {
+                    Swal.fire('Mensaje enviado', '¡Gracias por contactarnos!', 'success');
+                    contactForm.reset();
+                }, function(error) {
+                    console.error('Error sending email:', error);
+                    Swal.fire('Error', 'No se pudo enviar el mensaje. Inténtalo de nuevo.', 'error');
+                });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
