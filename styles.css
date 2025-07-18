@@ -323,7 +323,14 @@ header.scrolled {
 
 .about-text h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin: revert;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    color: var(--color-texto);
+    margin-bottom: 30px;
 }
 
 .about-image {
@@ -400,6 +407,7 @@ header.scrolled {
     box-shadow: var(--shadow-medium);
 }
 
+
 .contact-info h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
@@ -413,7 +421,7 @@ header.scrolled {
 .contact-links {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 25px;
 }
 
 .contact-links a {
@@ -791,6 +799,19 @@ footer i {
     }
     .carousel-button.next {
         right: 10px;
+    }
+    .about-text h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 1rem;
+    }
+
+    .about-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 1.5rem;
     }
 }
 
