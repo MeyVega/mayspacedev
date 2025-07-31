@@ -6,7 +6,7 @@
     <title>MaySpaceDev - Estudio de Diseño y Desarrollo Web</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="may.png" type="image/x-icon">
+    <link rel="icon" href="newlogo-modified.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="styles.css">
@@ -15,7 +15,7 @@
     <header>
         <nav class="container header-nav">
             <a href="#home" class="logo">
-                <img src="may.png" alt="MaySpaceDev Logo" class="logo-icon" />
+                <img src="newlogo.png" alt="MaySpaceDev Logo" class="logo-icon" />
                 <span>MaySpaceDev</span>
             </a>
             <div class="hamburger">
@@ -33,18 +33,26 @@
     </header>
 
     <main>
-        <section class="hero" id="home">
-            <div class="container">
+       <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-image">
+                    <img src="/demo.png" alt="Diseño Web Profesional" />
+                </div>
+                
                 <div class="hero-content">
-                    <h1>Diseño Web Profesional para Marcas con Próposito ✨</h1>
-                    <p class="hero-subtitle">Tu página web es tu carta de presentación. Muetra a tus clientes una One Page fácil de usar, fácil de encontrar y fácil de vender.</p>
+                    <h1>Diseño Web para Marcas con Propósito <i class="fas fa-star"></i></h1>
+                    <p class="hero-subtitle">Tu página web es tu carta de presentación. Muestra a tus clientes una One Page fácil de usar, fácil de encontrar y fácil de vender.</p>
+                    
                     <div class="hero-actions">
-                        <a href="#services" class="cta-button"><i class="fas fa-gem"></i> Ver Mis Servicios</a>
-                        <a href="#contact" class="cta-button secondary"><i class="fas fa-rocket"></i> Hablemos de tu Proyecto</a>
+                        <a href="#contact" class="cta-button">
+                            <i class="fas fa-rocket"></i> Hablemos de tu Proyecto
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
         <section class="why-us" id="why-us">
             <div class="container">
@@ -233,7 +241,7 @@
                             <img src="tools.gif" alt="GIF del proyecto MayTool">
                         </div>
                         <div class="portfolio-card-content">
-                            <h4>MayTool</h4>
+                            <h4>MayToolSite</h4>
                             <p>Creación de una suite de herramientas de productividad para desarrolladores y diseñadores.</p>
                             <div class="card-tags">
                                 <span>Herramienta</span>
@@ -328,7 +336,7 @@
                             <p>Modelo de tienda online para la venta de pines y productos de colección, con carrito de compras integrado.</p>
                             <div class="card-tags">
                                 <span>E-commerce</span>
-                                <span>Shopify</span>
+                                <span>Shopping</span>
                             </div>
                         </div>
                     </a>
@@ -369,7 +377,7 @@
                     </div>
                     <div class="about-image">
                         <div class="profile-card">
-                            <img src="favicon.png" alt="Foto de May" class="profile-avatar">
+                            <img src="newlogo.png" alt="Foto de May" class="profile-avatar">
                             <div class="profile-name">May</div>
                             <div class="profile-title">Creative Developer & Designer</div>
                             <div class="profile-location">Costa Rica <i class="fas fa-flag"></i></div>
@@ -380,13 +388,31 @@
         </section>
 
         <section class="final-cta" id="final-cta">
-            <div class="container">
-                <h2>🌍 "Tengo una marca, pero no tengo presencia digital…"</h2>
-                <p>Si esta frase te suena familiar, estás en el lugar correcto. Hoy, el 81% de los clientes buscan en internet antes de decidir. Si no te encuentran… encontrarán a tu competencia.</p>
-                <p>No necesitas conocimientos técnicos. Cuéntame sobre tu marca y te ayudaré a destacar en el mundo digital.</p>
-                <a href="#contact" class="cta-button"><i class="fas fa-paper-plane"></i> Quiero llevar mi marca al mundo digital</a>
-            </div>
-        </section>
+    <div class="cta-with-images">
+        <div class="cta-image-left">
+        <img src="/izquierda.png" alt="Decoración izquierda" />
+        </div>
+
+        <div class="cta-content">
+        <h2><i class="fas fa-globe"></i> ¿Tienes una marca pero aún no brillas en internet?</h2>
+        <p>
+            El 81% de tus clientes buscan en línea antes de comprar. Si no te encuentran, encontrarán a tu competencia.
+        </p>
+        <p>
+            No necesitas conocimientos técnicos. Cuéntame sobre tu marca y te ayudaré a destacar en el mundo digital.
+        </p>
+        <a href="#contact" class="cta-button">
+            <i class="fas fa-paper-plane"></i> Quiero llevar mi marca al mundo digital
+        </a>
+        </div>
+
+        <div class="cta-image-right">
+        <img src="/derecha.png" alt="Decoración derecha" />
+        </div>
+    </div>
+</section>
+
+
 
         <section class="contact" id="contact">
             <div class="container">
@@ -445,82 +471,98 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-            window.addEventListener('scroll', () => {
-                const header = document.querySelector('header');
-                header.classList.toggle('scrolled', window.scrollY > 50);
-            });
-
-            // --- LÓGICA PARA FORMULARIO DE CONTACTO CON EMAILJS ---
-            emailjs.init('wvau8hp3Vcy9Qf_mP'); // Tu User ID de EmailJS
-            const contactForm = document.getElementById('contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    emailjs.sendForm('service_btdz3ry', 'template_c1y027u', this) // Tu Service ID y Template ID
-                        .then(() => {
-                            Swal.fire('¡Mensaje Enviado!', 'Gracias por contactarme, te responderé pronto.', 'success');
-                            contactForm.reset();
-                        }, (error) => {
-                            Swal.fire('Error', 'Hubo un problema al enviar el mensaje. Inténtalo de nuevo.', 'error');
-                        });
-                });
-            }
-
-            // --- LÓGICA PARA EL CARRUSEL DE DISEÑOS POPULARES ---
-            const track = document.querySelector('.carousel-track');
-            if (track) { 
-                const slides = Array.from(track.children);
-                const nextButton = document.querySelector('.carousel-button.next');
-                const prevButton = document.querySelector('.carousel-button.prev');
-                
-                let slideWidth = 0;
-                let currentIndex = 0;
-
-                const updateSlideWidth = () => {
-                    if (slides.length > 0) {
-                       slideWidth = slides[0].getBoundingClientRect().width;
-                    }
-                }
-
-                const updateCarousel = () => {
-                    if (!track) return;
-                    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-                    
-                    // Lógica para habilitar/deshabilitar botones
-                    prevButton.disabled = currentIndex === 0;
-
-                    const slidesInView = Math.round(track.parentElement.offsetWidth / slideWidth);
-                    nextButton.disabled = currentIndex >= slides.length - slidesInView;
-                }
-
-                nextButton.addEventListener('click', () => {
-                    currentIndex++;
-                    updateCarousel();
-                });
-
-                prevButton.addEventListener('click', () => {
-                    currentIndex--;
-                    updateCarousel();
-                });
-
-                window.addEventListener('resize', () => {
-                    updateSlideWidth();
-                    updateCarousel();
-                });
-                
-                setTimeout(() => {
-                    updateSlideWidth();
-                    updateCarousel();
-                }, 100);
-            }
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        // Toggle del menú hamburguesa con cambio de icono
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Cambiar icono según el estado del menú
+            hamburger.innerHTML = navLinks.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
+                : '<i class="fas fa-bars"></i>';
         });
-    </script>
+
+        // Cerrar menú móvil al hacer clic en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Efecto scroll en header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // --- LÓGICA PARA FORMULARIO DE CONTACTO CON EMAILJS ---
+        emailjs.init('wvau8hp3Vcy9Qf_mP'); // Tu User ID de EmailJS
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_btdz3ry', 'template_c1y027u', this) // Tu Service ID y Template ID
+                    .then(() => {
+                        Swal.fire('¡Mensaje Enviado!', 'Gracias por contactarme, te responderé pronto.', 'success');
+                        contactForm.reset();
+                    }, (error) => {
+                        Swal.fire('Error', 'Hubo un problema al enviar el mensaje. Inténtalo de nuevo.', 'error');
+                    });
+            });
+        }
+
+        // --- LÓGICA PARA EL CARRUSEL DE DISEÑOS POPULARES ---
+        const track = document.querySelector('.carousel-track');
+        if (track) { 
+            const slides = Array.from(track.children);
+            const nextButton = document.querySelector('.carousel-button.next');
+            const prevButton = document.querySelector('.carousel-button.prev');
+            
+            let slideWidth = 0;
+            let currentIndex = 0;
+
+            const updateSlideWidth = () => {
+                if (slides.length > 0) {
+                   slideWidth = slides[0].getBoundingClientRect().width;
+                }
+            }
+
+            const updateCarousel = () => {
+                if (!track) return;
+                track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+                
+                // Lógica para habilitar/deshabilitar botones
+                prevButton.disabled = currentIndex === 0;
+
+                const slidesInView = Math.round(track.parentElement.offsetWidth / slideWidth);
+                nextButton.disabled = currentIndex >= slides.length - slidesInView;
+            }
+
+            nextButton.addEventListener('click', () => {
+                currentIndex++;
+                updateCarousel();
+            });
+
+            prevButton.addEventListener('click', () => {
+                currentIndex--;
+                updateCarousel();
+            });
+
+            window.addEventListener('resize', () => {
+                updateSlideWidth();
+                updateCarousel();
+            });
+            
+            setTimeout(() => {
+                updateSlideWidth();
+                updateCarousel();
+            }, 100);
+        }
+    });
+</script>
 </body>
 </html>
