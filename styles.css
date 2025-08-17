@@ -319,6 +319,7 @@ header.scrolled {
   color: var(--color-texto-oscuro);
   margin-bottom: 25px;
   line-height: 1.2;
+  text-align: center;
 }
 
 .hero h1 i {
@@ -332,16 +333,15 @@ header.scrolled {
   margin-bottom: 40px;
   font-weight: 400;
   line-height: 1.6;
+  text-align: center;
 }
 
 .hero-actions {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  display: grid;
 }
 
 .cta-button {
-  display: inline-flex;
+  display: block;
   align-items: center;
   gap: 8px;
   background: linear-gradient(
@@ -359,6 +359,13 @@ header.scrolled {
   box-shadow: var(--shadow-soft);
   border: none;
   cursor: pointer;
+      text-align: center;
+}
+
+.highlight {
+  font-weight: 700;
+  color: var(--color-principal, #333);
+  display: inline-block; 
 }
 
 .cta-button:hover {
@@ -366,17 +373,20 @@ header.scrolled {
   box-shadow: 0 8px 25px rgba(194, 184, 255, 0.25);
 }
 
-.cta-button.secondary {
-  background: transparent;
-  color: var(--color-texto-oscuro);
-  box-shadow: none;
-  border: 2px solid var(--color-principal);
+.floating-shape {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgba(194, 184, 255, 0.15);
+  border-radius: 50%;
+  top: 20%;
+  left: 15%;
+  z-index: 1;
 }
-
-.cta-button.secondary:hover {
-  background: var(--color-principal);
-  color: white;
-  box-shadow: var(--shadow-soft);
+.shape2 {
+  top: 60%;
+  left: 70%;
+  background: rgba(244, 198, 217, 0.2);
 }
 
 .cta-with-images {
