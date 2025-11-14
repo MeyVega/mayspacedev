@@ -1,0 +1,1003 @@
+/* --- 1. VARIABLES Y RESET BÁSICO --- */
+
+:root {
+    /* Paleta Monocromática */
+    --color-principal: #A58FD0; /* ¡NUEVO COLOR! Morado Lavanda Intenso */ 
+    --color-fondo-claro: #F5F5F5; 
+    --color-texto-oscuro: #222222; 
+    --color-texto-claro: #4A4A4A; 
+
+    /* Tipografía */
+    --font-heading: 'Balsamiq Sans', cursive;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-texto-oscuro);
+    line-height: 1.6;
+    background-color: var(--color-fondo-claro);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-principal);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-texto-oscuro);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 2. ESTILOS BASE DE SECCIÓN --- */
+
+section {
+    padding: 80px 0;
+    width: 100%;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--color-texto-claro);
+    margin-bottom: 40px;
+}
+
+/* --- 3. HEADER Y NAVEGACIÓN --- */
+
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease; /* Aseguramos que el padding tenga transición */
+    
+    /* 1. Definimos la altura base aquí, usando un padding generoso */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 2. ELIMINAMOS EL PADDING DE ESTA CLASE PARA EVITAR CONFLICTOS */
+    padding: 0 20px; 
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    
+    /* 3. Reducimos el padding para que se "encoga" al hacer scroll */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-texto-oscuro);
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    padding: 0 15px;
+    font-weight: 500;
+    color: var(--color-texto-claro);
+}
+
+.nav-links li a:hover {
+    color: var(--color-principal);
+}
+
+/* Hamburguesa (Oculto por defecto en desktop) */
+.hamburger {
+    display: none;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 65px; /* Ajustar según la altura del header */
+        left: 0;
+        background-color: white;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+        padding-bottom: 10px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li a {
+        padding: 10px 0;
+        /* border-top: 1px solid #eee; */
+    }
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--color-texto-oscuro);
+    }
+}
+
+
+/* --- 4. SECCIÓN HERO (HOMES) --- */
+        .hero-image-only {
+            background-color: var(--color-fondo-claro);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 20px;
+        }
+        
+        .hero-image-container {
+            display: inline-block;
+            max-width: 800px;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .hero-image-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+            filter: grayscale(20%) contrast(110%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        
+        .hero-image-container:hover img {
+            transform: scale(1.02);
+        }
+        
+        .image-credits {
+            margin-top: 20px;
+            color: var(--color-texto-claro);
+            font-size: 1rem;
+            font-family: var(--font-body);
+            font-weight: 500;
+        }
+/* --- 5. SECCIÓN SOBRE MÍ (#about) --- */
+
+.about {
+    background-color: var(--color-principal);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    color: white;
+    text-align: left;
+    max-width: 600px;
+}
+
+.about-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Animación de Rebote para la Estrella */
+@keyframes subtle-bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.about-star {
+    color: white;
+    font-size: 0.8em;
+}
+.about-star.star-bounce {
+    display: inline-block;
+    animation: subtle-bounce 2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.contact-title {
+    color: white;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.contact-item i {
+    color: white;
+    margin-right: 8px;
+}
+.contact-item {
+    font-size: 1rem;
+}
+
+/* --- ESTILOS DE RESALTE DENTRO DEL PÁRRAFO --- */
+
+/* Resalte Principal (Color de Acento y Borde) */
+.highlight-accent {
+    color: white; /* Blanco para que destaque en el fondo oscuro */
+    font-weight: 600; 
+    border-bottom: 2px dashed white; 
+    transition: all 0.3s ease-in-out;
+    cursor: help; 
+}
+.highlight-accent:hover {
+    border-bottom: 2px solid var(--color-texto-oscuro);
+    color: var(--color-texto-oscuro); /* Cambia a negro para un efecto de 'flash' */
+}
+
+/* Resalte Secundario (Fondo Sutil) */
+.highlight-subtle {
+    font-weight: 600;
+    /* color: var(--color-texto-oscuro); */ /* Texto oscuro */
+   /*  background-color: rgba(255, 255, 255, 0.2); */ /* Fondo blanco semitransparente sobre el morado */
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.highlight-subtle:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Polaroid Card */
+.polaroid-card {
+    position: relative;
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transform: rotate(-3deg);
+}
+
+.profile-avatar {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 3px;
+    display: block;
+}
+
+.info-badges {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 5px 0;
+    font-size: 0.9rem;
+    color: var(--color-texto-claro);
+    font-weight: 500;
+}
+
+@media (min-width: 992px) {
+    .about-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 80px;
+    }
+
+    .about-image {
+        order: 1;
+        width: 300px;
+        flex-shrink: 0;
+        margin-top: 0;
+    }
+    
+    .about-text {
+        order: 2;
+        width: 60%;
+        max-width: 600px;
+        margin-top: 20px;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .polaroid-card {
+        transform: rotate(0deg);
+    }
+    .about-title {
+        text-align: center;
+    }
+    .about-text {
+        text-align: center;
+    }
+}
+
+
+/* --- 6. SECCIÓN METODOLOGÍA Y COMPROMISO (#methodology) --- */
+
+.methodology {
+    background-color: white;
+}
+
+.methodology .section-title {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.wavy-timeline-container {
+    position: relative;
+    padding: 60px 0 40px 0;
+}
+
+.wavy-line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: var(--color-principal);
+    stroke-width: 4px;
+    z-index: 1;
+}
+
+.timeline-points-grid {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2;
+}
+
+/* Puntos de la Onda */
+.timeline-point {
+    text-align: center;
+    max-width: 150px;
+    z-index: 10;
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.timeline-point.point-2,
+.timeline-point.point-4 {
+    margin-top: 80px;
+}
+
+.point-icon-large {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-principal);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 6px white;
+}
+.point-icon-large i {
+    font-size: 1rem;
+}
+
+.point-number {
+    font-size: 1.2rem;
+    color: var(--color-principal);
+    font-weight: 700;
+}
+
+.timeline-point h3 {
+    color: var(--color-texto-oscuro);
+    margin: 5px 0 0 0;
+    font-size: 1.4rem;
+    font-family: var(--font-heading);
+    line-height: 1.2;
+}
+
+.timeline-point p {
+    font-size: 0.85rem;
+    margin-top: 5px;
+    color: var(--color-texto-claro);
+}
+
+.legend-bar {
+    border-top: 1px solid var(--color-principal);
+    width: 100%;
+    margin-top: 80px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.9rem;
+    color: var(--color-texto-claro);
+}
+.legend-item i {
+    color: var(--color-principal);
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .wavy-line {
+        display: none;
+    }
+    .timeline-points-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .timeline-point {
+        margin-top: 0 !important;
+    }
+    .legend-bar {
+        margin-top: 30px;
+        flex-direction: column;
+        gap: 10px;
+        text-align: left;
+    }
+}
+
+
+/* --- 7. HABILIDADES Y CV (#education-skills) --- */
+
+.education-skills {
+    background-color: var(--color-fondo-claro);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.card-title-secondary {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-principal);
+    margin-bottom: 20px;
+}
+
+.skill-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+/* Experiencia/Educación */
+.experience-item, .education-item {
+    border-left: 3px solid var(--color-principal);
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+.experience-time, .education-time {
+    color: var(--color-principal);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+.experience-item h4, .education-item h4 {
+    margin-top: 5px;
+    font-size: 1.15rem;
+    color: var(--color-texto-oscuro);
+    font-family: var(--font-body);
+}
+
+/* Idiomas (Tabla) */
+.language-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.language-table th {
+    padding: 10px 0;
+    text-align: left;
+    color: var(--color-principal);
+    border-bottom: 1px solid var(--color-principal);
+}
+.language-table td {
+    padding: 8px 0;
+    font-size: 1rem;
+    color: var(--color-texto-claro);
+}
+
+/* Software/Stack */
+.software-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+.software-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-right: 15px;
+    background-color: var(--color-texto-oscuro);
+}
+.software-icon.figma { background-color: #00C783; }
+.software-icon.js { background-color: #F7DF1E; color: black;}
+.software-icon.cloud { background-color: #FF9900; }
+.software-icon.security { background-color: #A000A0; }
+.software-icon.devops { background-color: #0077CC; }
+
+.skill-name {
+    flex-grow: 1;
+    color: var(--color-texto-claro);
+}
+
+.rating-stars {
+    color: var(--color-principal);
+    font-size: 1rem;
+}
+.rating-stars .far {
+    color: #bdbdbd;
+}
+
+/* Certificaciones y Habilidades Blandas */
+.cert-list, .soft-skills-list {
+    list-style: none;
+    padding: 0;
+}
+.cert-list li, .soft-skills-list li {
+    margin-bottom: 12px;
+    color: var(--color-texto-claro);
+}
+.cert-list li i, .soft-skills-list li i {
+    color: var(--color-principal);
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 992px) {
+    .skills-grid {
+        grid-template-columns: 1.5fr 2fr;
+    }
+}
+
+
+/* --- 8. PROYECTOS DESTACADOS (#dynamic-portfolio) --- */
+
+.dynamic-portfolio {
+    background-color: white;
+}
+
+.portfolio-highlight-grid {
+    display: grid;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.project-highlight-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    border: 1px solid #eee;
+}
+
+.project-image-box {
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.project-image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Estilos de las etiquetas (tags) */
+.project-type-tag {
+    display: inline-block;
+    color: white;
+    background-color: var(--color-principal);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.project-content-box h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-texto-oscuro);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Grid de Bloques de Información (Reto/Rol) */
+.info-blocks-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.info-block {
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--color-texto-oscuro);
+    background-color: var(--color-fondo-claro);
+    border: 1px solid #ddd;
+    border-left: 4px solid var(--color-principal);
+}
+.info-block h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--color-principal);
+}
+.project-actions {
+    margin-top: 20px;
+}
+/* Acciones y Tags */
+.tech-stack-tags {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--color-texto-claro);
+    margin-top: 10px;
+}
+.cta-link-secondary {
+    display: inline-block;
+    color: var(--color-principal);
+    font-weight: bold;
+    margin-top: 15px;
+    text-decoration: underline;
+}
+
+/* Botón Principal "Ver Más" (Sutil) */
+.main-cta-button {
+    background-color: transparent;
+    color: var(--color-texto-oscuro);
+    border: 2px solid var(--color-texto-oscuro);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    margin-top: 60px;
+    display: inline-block;
+}
+.main-cta-button:hover {
+    background-color: var(--color-principal);
+    color: white;
+    border-color: var(--color-principal);
+}
+
+@media (min-width: 992px) {
+    .project-highlight-card {
+        flex-direction: row;
+        min-height: 400px;
+        align-items: center;
+        padding: 40px;
+    }
+    .project-image-box, .project-content-box {
+        width: 50%;
+    }
+    .project-image-box {
+        margin-bottom: 0;
+    }
+    .info-blocks-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .layout-left .project-image-box {
+        order: 1;
+        padding-right: 40px;
+    }
+    .layout-left .project-content-box {
+        order: 2;
+    }
+    .layout-right .project-image-box {
+        order: 2;
+        padding-left: 40px;
+    }
+    .layout-right .project-content-box {
+        order: 1;
+        padding-right: 0;
+    }
+}
+
+
+/* --- 9. SECCIÓN CONTACTO (#contact) --- */
+
+.contact {
+    background-color: var(--color-fondo-claro); /* Fondo claro para el contraste final */
+}
+
+.contact .section-title {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: var(--color-texto-oscuro);
+}
+
+.contact-content-simplified {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.contact-form-card, .contact-image-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.contact-card-title {
+    font-family: var(--font-heading);
+    color: var(--color-principal);
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+/* Estilos de Formulario */
+.form-group { margin-bottom: 15px; }
+.form-group label {
+    display: block; font-weight: 500; margin-bottom: 5px; color: var(--color-texto-claro);
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; margin-top: 5px; font-family: var(--font-body);
+}
+.form-group textarea { resize: vertical; }
+
+/* Botón de Enviar */
+.submit-button {
+    width: 100%; background-color: var(--color-principal); color: white; padding: 12px; border: none; border-radius: 8px;
+    cursor: pointer; font-weight: 600; font-size: 1rem; transition: background-color 0.3s; margin-top: 15px;
+}
+.submit-button:hover { background-color: var(--color-texto-oscuro); }
+
+/* Estilos de Imagen Animada */
+.contact-image-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.contact-animated-illustration {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.contact-image-caption {
+    font-size: 1.1rem;
+    color: var(--color-texto-claro);
+    line-height: 1.5;
+    font-family: var(--font-heading);
+}
+
+@media (min-width: 768px) {
+    .contact-content-simplified {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* --- 10. ESTILOS DEL FOOTER (#final-thank-you) --- */
+
+.final-thank-you {
+    background-color: white;
+    padding: 80px 0 40px 0;
+    text-align: center;
+}
+
+.thank-you-title-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.thank-you-title {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    color: var(--color-principal);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+/* Elementos decorativos */
+.decorative-star, .decorative-shape {
+    position: absolute;
+    color: var(--color-principal);
+    opacity: 0.7;
+    z-index: 0;
+}
+.decorative-star {
+    top: -16%;
+    right: -24%;
+    font-size: 4rem;
+    animation: giroSutil 6s infinite ease-in-out alternate;
+}
+
+@keyframes giroSutil {
+    from {
+        transform: rotate(15deg);
+    }
+    to {
+        transform: rotate(25deg);
+    }
+}
+.decorative-shape {
+    bottom: -10%;
+    left: -23%;
+    font-size: 4rem;
+    animation: giroSutil 6s infinite ease-in-out alternate;
+}
+
+
+/* Separador CONTACTO */
+.contact-line-separator {
+    border-top: 2px solid var(--color-principal);
+    width: 60%;
+    max-width: 400px;
+    margin: 30px auto 15px auto;
+    position: relative;
+}
+.separator-text {
+    display: block;
+    background-color: white;
+    color: var(--color-principal);
+    padding: 0 10px;
+    margin-top: -12px;
+    font-weight: bold;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--font-body);
+}
+
+/* Enlaces de Contacto */
+.footer-contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.footer-contact-info .contact-item {
+    color: var(--color-texto-oscuro);
+    font-size: 1rem;
+}
+.footer-contact-info .contact-item i {
+    color: var(--color-principal);
+    margin-right: 5px;
+}
+
+/* Copyright */
+.footer-copyright {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: var(--color-texto-claro);
+}
+
+@media (max-width: 768px) {
+    .thank-you-title {
+        font-size: 3rem;
+    }
+    .footer-contact-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact-line-separator {
+        width: 90%;
+    }
+    .decorative-star, .decorative-shape {
+        font-size: 1.5rem;
+    }
+}
+
+/* --- ESTILOS PARA LA NUEVA TARJETA DE INTERESES/HOBBIES (Tags) --- */
+
+.hobbies-tags-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 13px;
+}
+
+.hobby-tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--color-principal); 
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.hobby-tag i {
+    color: white; 
+    margin-right: 6px;
+    font-size: 0.8rem;
+}
+
+.hobby-tag:hover {
+    background-color: var(--color-); 
+    cursor: default;
+}
+/* Ajuste para que la tarjeta de habilidades se vea mejor en móvil (si es necesario) */
+@media (max-width: 500px) {
+    .hobby-tag {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+
+

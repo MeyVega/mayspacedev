@@ -1,598 +1,518 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mery Vega M - Creative Developer Portafolio</title>
+    <meta name="description" content="Portafolio de Mery Vega M: Creative Developer con enfoque en Diseño UX/UI y Desarrollo Frontend.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="styles.css" />
 
-  <title>Mayspacedev - Estudio de Diseño y Desarollo Web</title>
-  <meta name="description" content="Estudio digital creativo para emprendedores. Diseño web, branding, UI/UX y estrategia visual con estilo pastel y enfoque humano.">
-  <meta name="keywords" content="mayspacedev, diseño web, branding, estudio digital, emprendedores creativos, páginas web pastel, diseño UI, desarrollo web femenino">
-  <meta name="author" content="Mayspacedev Studio">
+    <!-- Favicon -->
+    <link rel="icon" href="/LogoTool.png" type="image/x-icon" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-
-  <!-- Iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="/newlogo-modified.png" type="image/x-icon" />
-
-  <!-- Estilos -->
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="hero-animations.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-  <!-- Meta Social Sharing (Open Graph + Twitter Cards) -->
-  <meta property="og:title" content="Mayspacedev - Diseño Web y Branding Creativo" />
-  <meta property="og:description" content="Transforma tu marca con diseño web estratégico, identidad visual moderna y experiencia digital atractiva. Trabajemos juntas." />
-  <meta property="og:image" content="https://mayspacedev.com/newlogo.png" />
-  <meta property="og:url" content="https://mayspacedev.com/" />
-  <meta property="og:type" content="website" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mayspacedev - Diseño Web y Branding para Emprendedores" />
-  <meta name="twitter:description" content="Diseño y desarrollo web pastel-tech, branding y estrategia digital con propósito. Ideal para marcas pequeñas con grandes sueños." />
-  <meta name="twitter:image" content="https://mayspacedev.com/newlogo.png" />
 </head>
 
 <body>
     <header>
         <nav class="container header-nav">
             <a href="#home" class="logo">
-                <img src="newlogo.png" alt="MaySpaceDev Logo" class="logo-icon" />
-                <span>MaySpaceDev</span>
+                <img src="LogoTool.png" alt="Mery Vega M Logo" class="logo-icon" />
+                <span>Mery Vega M</span>
             </a>
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
             <ul class="nav-links">
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#popular-designs">Diseños</a></li>
-                <li><a href="#dynamic-portfolio">Portafolio</a></li>
-                <li><a href="#process">Proceso</a></li>
                 <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#methodology">Metodología</a></li>
+                <li><a href="#education-skills">Habilidades</a></li>
+                <li><a href="#dynamic-portfolio">Proyectos</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-       <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-image">
-                    <img src="/demo.gif" alt="Diseño Web Profesional" />
+        
+        <section class="hero-image-only" id="home">
+            <div class="container">
+                <div class="hero-image-container">
+                    <img 
+                        src="portafolio.png" 
+                        alt="Diseño creativo de Portafolio: Portafolio, Mery Vega M, Creative Developer" 
+                    />
                 </div>
-                <div class="floating-shape shape1"></div>
-                <div class="floating-shape shape2"></div>
-                <div class="hero-content">
-                    <h1 class="hero-title">Diseño Web para Marcas con Propósito <i class="fas fa-star"></i></h1>
-                    <p class="hero-subtitle"> Tu página web es tu carta de presentación. Muestra a tus clientes una <span class="highlight">One Page</span> fácil de usar, fácil de encontrar y fácil de vender.</p>
-                    <div class="hero-actions">
-                        <a href="#contact" class="cta-button">
-                            <i class="fas fa-rocket"></i> Hablemos de tu Proyecto
-                        </a>
-                    </div>
+                <div class="image-credits">
+                    <p>En mis sueños, el espacio es el límite.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-        <section class="why-us" id="why-us">
+        <section class="about" id="about"> 
             <div class="container">
-                <h2 class="section-title">Poderosas Razones Para Crear Tu Web Conmigo</h2>
-                <div class="why-us-grid">
-                    <div class="why-us-item">
-                        <div class="why-us-icon"><i class="fas fa-palette"></i></div>
-                        <h3>Diseño Web a Medida</h3>
-                        <p>Apostar por un diseño único y no por una plantilla, pone en valor tu marca frente a la competencia y crea una experiencia memorable.</p>
+                <div class="about-content">
+
+                    <div class="about-image profile-polaroid-container">
+                        <div class="polaroid-card">
+                            <img src="vega.jpeg" alt="Foto de Mery Vega M" class="profile-avatar">
+                            
+                            <div class="info-badges">
+                                <span>Costa Rica</span>
+                                <span class="date">03 de Sept de 2023</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="why-us-item">
-                        <div class="why-us-icon"><i class="fas fa-heart"></i></div>
-                        <h3>Experiencia y Dedicación</h3>
-                        <p>Mi capacidad de escuchar y entender tus necesidades es clave para el éxito del proyecto. Proporciono seguridad y Garantía.</p>
-                    </div>
-                    <div class="why-us-item">
-                        <div class="why-us-icon"><i class="fas fa-bullseye"></i></div>
-                        <h3>Webs Orientadas a Negocio</h3>
-                        <p>Diseñamos la web que tu cliente ideal está esperando y buscando, enfocada en cumplir tus objetivos comerciales.</p>
+
+                    <div class="about-text">
+                        <h1 class="about-title">
+                            ¡HOLA! <i class="fas fa-star about-star star-bounce"></i> 
+                        </h1>
+
+                        <p class="about-description">
+                            Mi nombre es Mery y soy una desarolladora creativa de <span class="highlight-accent"> Costa Rica</span>, apasionada por la informática y el potencial de la tecnología para resolver problemas complejos. 
+                        </p>
+                        <p class="about-description">
+                           <span class="highlight-subtle">Mi enfoque es claro : </span> construir experiencias digitales modernas con código limpio, cerrando la brecha entre la <span class="highlight-accent">estética del arte</span> y la <span class="highlight-subtle">solidez de la tecnología</span>. Estoy en constante aprendizaje para llevar mis habilidades al siguiente nivel digital.
+                        </p>
+
+                        <h3 class="contact-title">Contacto Rápido</h3>
+                        <div class="contact-details">
+                            <div class="contact-item"><i class="fas fa-phone-alt"></i> (506) 7053 - 8091</div>
+                            <div class="contact-item"><i class="fas fa-envelope"></i> meryvega506@gmail.com</div>
+                            <div class="contact-item"><i class="fab fa-instagram"></i> @mayspace_du</div>
+                            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> San José, Costa Rica</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="services" id="services">
+        <section class="formation methodology" id="methodology">
             <div class="container">
-                <h2 class="section-title">¿Cómo Puedo Ayudarte?</h2>
-                <p class="section-subtitle">Desde la identidad de tu marca hasta una plataforma web completa, cubro todas las áreas para potenciar tu negocio en el mundo digital.</p>
-                <div class="services-grid">
-                    <div class="service-package">
-                        <div class="package-header">
-                            <h3>Web OPS (One Page)</h3>
-                            <span class="package-duration">¡Lista en 48 horas!</span>
+                
+                <h2 class="section-title">MI COMPROMISO PROFESIONAL</h2>
+                <p class="section-subtitle">Mi compromiso va más allá del código: me centro en la proactividad, la adaptabilidad y una visión amplia de la tecnología.</p>
+                
+                <div class="wavy-timeline-container">
+                    
+                    <svg class="wavy-line" viewBox="0 0 1000 100" preserveAspectRatio="none">
+                        <path d="M0 50 C200 10, 300 90, 500 50 C700 10, 800 90, 1000 50" />
+                    </svg>
+
+                    <div class="timeline-points-grid">
+
+                        <div class="timeline-point point-1">
+                            <div class="point-icon-large"><i class="fas fa-lightbulb"></i></div>
+                            <h3>Proactividad</h3>
+                            <p>Autogestión de tareas y soluciones antes de escalar problemas.</p>
                         </div>
-                        <p class="package-description">La solución perfecta y de bajo costo para tener una presencia web profesional de inmediato.</p>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> Video o carrusel de imágenes</li>
-                            <li><i class="fas fa-check"></i> Galería y sección de servicios</li>
-                            <li><i class="fas fa-check"></i> Formulario y Botón de WhatsApp</li>
-                            <li><i class="fas fa-check"></i> Hosting y Certificado SSL Incluido</li>
-                        </ul>
-                        <a href="#contact" class="cta-button package-cta">Contratar Servicio →</a>
-                    </div>
-                    <div class="service-package">
-                        <div class="package-header">
-                            <h3>Diseño One Page</h3>
-                            <span class="package-duration">Duración de 4 a 6 semanas</span>
+
+                        <div class="timeline-point point-2">
+                            <div class="point-icon-large"><i class="fas fa-sitemap"></i></div>
+                            <h3>Versatilidad</h3>
+                            <p>Visión Full-Stack: diseño, desarrollo, base de datos e infraestructura Cloud.</p>
                         </div>
-                        <p class="package-description">Ideal para emprendedores que empiezan o para lanzamientos de productos, servicios y cursos.</p>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> Diseño web de 1 página a medida</li>
-                            <li><i class="fas fa-check"></i> Diseño responsive (adaptable)</li>
-                            <li><i class="fas fa-check"></i> Integración Redes Sociales y Email</li>
-                            <li><i class="fas fa-check"></i> Optimización SEO básica</li>
-                        </ul>
-                        <a href="#contact" class="cta-button package-cta">Contratar Servicio →</a>
-                    </div>
-                    <div class="service-package featured">
-                        <div class="package-header">
-                            <h3>Diseño Web Pro</h3>
-                            <span class="package-duration">Duración de 6 a 8 semanas</span>
+
+                        <div class="timeline-point point-3">
+                            <div class="point-icon-large"><i class="fas fa-wrench"></i></div>
+                            <h3>Adaptabilidad</h3>
+                            <p>Adopción rápida de nuevas tecnologías, metodologías (Scrum) y lenguajes.</p>
                         </div>
-                        <p class="package-description">Si tu negocio está creciendo, esta es la presencia en línea completa y robusta que necesitas.</p>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> Diseño web de hasta 5 páginas</li>
-                            <li><i class="fas fa-check"></i> Blog o Portafolio integrado</li>
-                            <li><i class="fas fa-check"></i> Optimización SEO Avanzada</li>
-                            <li><i class="fas fa-check"></i> Capacitación Personalizada</li>
-                        </ul>
-                        <a href="#contact" class="cta-button package-cta">Contratar Servicio →</a>
-                    </div>
-                    <div class="service-package">
-                        <div class="package-header">
-                            <h3>E-commerce / Plataforma</h3>
-                            <span class="package-duration">Duración de 8 a 10 semanas</span>
+                        
+                        <div class="timeline-point point-4">
+                            <div class="point-icon-large"><i class="fas fa-shield-alt"></i></div>
+                            <h3>Seguridad First</h3>
+                            <p>Aplicación de fundamentos de Ciberseguridad en cada etapa del desarrollo.</p>
                         </div>
-                        <p class="package-description">La experiencia completa para vender online o crear una plataforma digital a medida (cursos, reservas, etc).</p>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> Todo lo del paquete Web Pro</li>
-                            <li><i class="fas fa-check"></i> Catálogo de productos y servicios</li>
-                            <li><i class="fas fa-check"></i> Integración de pasarelas de pago</li>
-                            <li><i class="fas fa-check"></i> Panel de administración total</li>
-                        </ul>
-                        <a href="#contact" class="cta-button package-cta">Contratar Servicio →</a>
-                    </div>
-                    <div class="service-package">
-                        <div class="package-header">
-                            <h3>Identidad de Marca</h3>
-                            <span class="package-duration">Branding Esencial</span>
+
+                        <div class="timeline-point point-5">
+                            <div class="point-icon-large"><i class="fas fa-users"></i></div>
+                            <h3>Colaboración</h3>
+                            <p>Comunicación asertiva y experiencia en reuniones técnicas efectivas.</p>
                         </div>
-                        <p class="package-description">Creamos la identidad visual que tu marca necesita para destacar, enamorar y ser recordada.</p>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> Diseño de Logo Profesional</li>
-                            <li><i class="fas fa-check"></i> Paleta de Colores y Tipografía</li>
-                            <li><i class="fas fa-check"></i> Manual de Marca Básico</li>
-                            <li><i class="fas fa-check"></i> Diseño de Tarjeta de Presentación</li>
-                        </ul>
-                        <a href="#contact" class="cta-button package-cta">Consultar Paquete →</a>
+                        
                     </div>
-                    <div class="service-package">
-                        <div class="package-header">
-                            <h3>Contenido para Redes</h3>
-                            <span class="package-duration">Paquete Social Media</span>
-                        </div>
-                        <p class="package-description">Diseñamos plantillas e imágenes para que tus redes sociales luzcan profesionales, atractivas y coherentes.</p>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> Diseño de 9 Plantillas para Posts</li>
-                            <li><i class="fas fa-check"></i> Diseño de 3 Plantillas para Stories</li>
-                            <li><i class="fas fa-check"></i> Banners para Perfiles (FB, IG)</li>
-                            <li><i class="fas fa-check"></i> Propuesta de estilo visual</li>
-                        </ul>
-                        <a href="#contact" class="cta-button package-cta">Consultar Paquete →</a>
+                    
+                    <div class="legend-bar">
+                        <span class="legend-item"><i class="fas fa-brain"></i> Actitud y Mentalidad</span>
+                        <span class="legend-item"><i class="fas fa-layer-group"></i> Enfoque Técnico</span>
+                        <span class="legend-item"><i class="fas fa-hands-helping"></i> Trabajo en Equipo</span>
                     </div>
+
                 </div>
+                
             </div>
         </section>
 
-        <section class="popular-designs" id="popular-designs">
+        <section class="education-skills" id="education-skills">
             <div class="container">
-                <h2 class="section-title">Estilos de Diseño que Marcan Tendencia</h2>
-                <p class="section-subtitle">Descubre algunos conceptos que podemos adaptar para darle a tu marca una voz única.</p>
-                <div class="carousel-container">
-                    <div class="carousel-track">
-                        <div class="carousel-slide">
-                            <img src="minimalista.jpeg" alt="Diseño Minimalista">
-                            <div class="carousel-overlay">
-                                <h3>Minimalista</h3>
-                                <p>Líneas limpias, espacios amplios y enfoque en el contenido.</p>
+                <h2 class="section-title">FORMACIÓN TÉCNICA Y CORE SKILLS</h2>
+                <p class="section-subtitle">
+                    Combinando diseño UX/UI con sólidas bases en desarrollo Full Stack, Cloud y Ciberseguridad.
+                </p>
+
+                <div class="skills-grid">
+                    
+                    <div class="column-left">
+                        
+                        <div class="skill-card">
+                            <h3 class="card-title-secondary">EXPERIENCIA LABORAL</h3>
+                            
+                            <div class="experience-item">
+                                <p class="experience-time">+ Dic 2023 - Sep 2025</p>
+                                <h4>Desarrollo de Software | BDBlocks</h4>
+                                <p>Diseño (UX/UI) y desarrollo de soluciones Full Stack (JS, HTML, CSS, SQL). Aplicación de Scrum, Ciberseguridad y DevOps (Docker) en infraestructura y redes.</p>
+                            </div>
+                            
+                            <div class="experience-item">
+                                <p class="experience-time">+ Dic 2017 - Nov 2023</p>
+                                <h4>Asistente de Ventas | Sector Retail</h4>
+                                <p>Implementación de tecnología para optimizar inventarios. Desarrollo de habilidades blandas: atención al detalle, organización y resolución de incidencias de clientes.</p>
                             </div>
                         </div>
-                        <div class="carousel-slide">
-                            <img src="bissines.jpeg" alt="Diseño para Negocios">
-                            <div class="carousel-overlay">
-                                <h3>Corporativo</h3>
-                                <p>Profesional, estructurado y orientado a generar confianza y conversiones.</p>
+
+                        <div class="skill-card">
+                            <h3 class="card-title-secondary">EDUCACIÓN Y FORMACIÓN</h3>
+                            
+                            <div class="education-item">
+                                <p class="education-time">2023 – Actualidad</p>
+                                <h4>Ingeniería en Sistemas</h4>
+                                <p>Universidad Nacional (UNA), Costa Rica.</p>
                             </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="ecomerce.jpeg" alt="Diseño para E-commerce">
-                            <div class="carousel-overlay">
-                                <h3>E-commerce</h3>
-                                <p>Enfocado en el producto, con una experiencia de compra fácil y atractiva.</p>
+                            
+                            <div class="education-item">
+                                <p class="education-time">2024 - 2025</p>
+                                <h4>Formación Complementaria</h4>
+                                <p>Women in Cloud (CINDE), Junior Achievement - Mujer Digital, Formación en Ciberseguridad, Nube y Desarollo.</p>
                             </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="creativo.jpeg" alt="Diseño Creativo">
-                            <div class="carousel-overlay">
-                                <h3>Creativo</h3>
-                                <p>Diseños atrevidos, colores vibrantes y layouts únicos para destacar.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="futurista.jpeg" alt="Diseño Futurista">
-                            <div class="carousel-overlay">
-                                <h3>Futurista</h3>
-                                <p>Elementos modernos, tipografías vanguardistas y animaciones sutiles.</p>
-                            </div>
+                            
+                            <h3 class="card-title-secondary">IDIOMAS</h3>
+                            <table class="language-table">
+                                <thead>
+                                    <tr>
+                                        <th>Idioma</th>
+                                        <th>Nivel</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Español</td>
+                                        <td>Nativo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Inglés</td>
+                                        <td>Intermedio</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+                    
+                    <div class="column-right">
+                        
+                        <div class="skill-card">
+                            <h3 class="card-title-secondary">CORE STACK Y TECNOLOGÍAS</h3>
+                            <div class="software-list">
+                                <div class="software-item">
+                                    <span class="software-icon figma">Fg</span>
+                                    <span class="skill-name">Diseño UX/UI & Prototipado</span>
+                                    <span class="rating-stars rating-high"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="software-item">
+                                    <span class="software-icon js">JS</span>
+                                    <span class="skill-name">Desarrollo Full Stack (JS, React, Python)</span>
+                                    <span class="rating-stars rating-high"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="software-item">
+                                    <span class="software-icon cloud">CL</span>
+                                    <span class="skill-name">Cloud Infra. (AWS, Azure, GCP)</span>
+                                    <span class="rating-stars rating-high"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="software-item">
+                                    <span class="software-icon security">CS</span>
+                                    <span class="skill-name">Ciberseguridad & Redes</span>
+                                    <span class="rating-stars rating-medium"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span>
+                                </div>
+                                 <div class="software-item">
+                                    <span class="software-icon devops">DV</span>
+                                    <span class="skill-name">Agile, Git & Docker</span>
+                                    <span class="rating-stars rating-high"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-card">
+                            <h3 class="card-title-secondary">CERTIFICACIONES RELEVANTES</h3>
+                            <ul class="cert-list">
+                                <li><i class="fas fa-certificate"></i> AWS Certified Cloud Practitioner</li>
+                                <li><i class="fas fa-certificate"></i> Microsoft Certified: Azure Fundamentals (AZ-900)</li>
+                                <li><i class="fas fa-certificate"></i> Microsoft Certified: Security, Compliance, and Identity (SC-900)</li>
+                                <li><i class="fas fa-certificate"></i> Junior Cybersecurity Analyst Career Path</li>
+                                <li><i class="fas fa-certificate"></i> CCST: Networking (Cisco Certified Support Technician)</li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-card">
+                            <h3 class="card-title-secondary">HABILIDADES BLANDAS</h3>
+                            <ul class="soft-skills-list">
+                                <li><i class="fas fa-check-circle"></i> Resolución de Problemas y Pensamiento Analítico.</li>
+                                <li><i class="fas fa-check-circle"></i> Organización, Proactividad y Trabajo en Equipo.</li>
+                                <li><i class="fas fa-check-circle"></i> Atención al Detalle y Adaptabilidad.</li>
+                            </ul>
+                        </div>
+                       <div class="skill-card personal-passions-card">
+                        <div class="hobbies-tags-list">
+                            <span class="hobby-tag"><i class="fas fa-rocket"></i> Space Lover</span>
+                            <span class="hobby-tag"><i class="fas fa-gamepad"></i> Videojuegos & Tech</span>
+                            <span class="hobby-tag"><i class="fas fa-cat"></i> Cat & Pet Friendly</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="dynamic-portfolio" id="dynamic-portfolio">
             <div class="container">
-                <h2 class="section-title">Mis Trabajos en Acción</h2>
-                <p class="section-subtitle">Un vistazo dinámico a algunos de mis proyectos. Haz clic para ver el sitio en vivo.</p>
-                <div class="dynamic-portfolio-grid">
-                    <a href="https://thewebsitelauncher.com/" target="_blank" class="portfolio-card">
-                        <div class="portfolio-card-image">
-                            <img src="bdb.gif" alt="GIF del proyecto TheWebsiteLauncher">
+                <h2 class="section-title">PROYECTOS REALIZADOS</h2>
+                <p class="section-subtitle">Seguimiento en mi proceso de UX/UI y el stack técnico detrás de mis trabajos principales.</p>
+                
+                <div class="portfolio-highlight-grid">
+
+                    <article class="project-highlight-card layout-left">
+                        <div class="project-image-box">
+                            <img src="tools.gif" alt="GIF del proyecto MayTool" />
+                            <div class="decorative-shape shape-accent-small"></div>
                         </div>
-                        <div class="portfolio-card-content">
-                            <h4>TheWebsiteLauncher</h4>
-                            <p>Desarrollo de plugins premium para directorios, enfocados en funcionalidad y experiencia de usuario.</p>
-                            <div class="card-tags">
-                                <span>Add-On</span>
-                                <span>PHP</span>
+                        
+                        <div class="project-content-box">
+                            <span class="project-type-tag tag-web-ui">Herramienta Web / UI/UX</span>
+                            <h3>MayToolSite Directorio</h3>
+                            
+                            <div class="info-blocks-grid">
+                                <div class="info-block block-challenge">
+                                    <h4>Reto</h4>
+                                    <p>Crear un directorio de recursos en español, rápido y fácil de navegar, para desarrolladores de habla hispana.</p>
+                                </div>
+                                <div class="info-block block-role">
+                                    <h4>Solución</h4>
+                                    <p>Diseño UX/UI completo (Figma), Desarrollo Frontend y Estructura de Datos.</p>
+                                </div>
+                            </div>
+
+                            <p class="project-description">La característica principal es la capacidad de guardar favoritos (usando localStorage) sin necesidad de registro.</p>
+                            
+                            <div class="project-actions">
+                                <span class="tech-stack-tags">Stack: React, TypeScript, Vite y Tailwind CSS.</span>
+                                <a href="https://www.maytools.site/" target="_blank" class="cta-link-secondary">
+                                    Ver Proyecto en Vivo <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
-                    </a>
-                    <a href="https://www.maytools.site/" target="_blank" class="portfolio-card">
-                        <div class="portfolio-card-image">
-                            <img src="tools.gif" alt="GIF del proyecto MayTool">
-                        </div>
-                        <div class="portfolio-card-content">
-                            <h4>MayToolSite</h4>
-                            <p>Creación de una suite de herramientas de productividad para desarrolladores y diseñadores.</p>
-                            <div class="card-tags">
-                                <span>Herramienta</span>
-                                <span>UI/UX</span>
+                    </article>
+
+                    <article class="project-highlight-card layout-right">
+                        <div class="project-content-box">
+                            <span class="project-type-tag tag-dev-ux">UX/UI & Desarrollo CMS</span>
+                            <h3>Repostería KM</h3>
+                            
+                            <div class="info-blocks-grid">
+                                <div class="info-block block-challenge">
+                                    <h4>Reto</h4>
+                                    <p>Digitalizar un emprendimiento local de repostería para aumentar pedidos y crear un flujo de usuario simple.</p>
+                                </div>
+                                <div class="info-block block-role">
+                                    <h4>Optimización</h4>
+                                    <p>UX Research (Entrevistas con usuarios), Prototipado, Desarrollo Responsive (HTML/CSS puro).</p>
+                                </div>
+                            </div>
+
+                            <p class="project-description">Diseño de una One Page enfocada en la toma de pedidos vía WhatsApp y optimizada para móvil, usando CSS Grid.</p>
+                            
+                            <div class="project-actions">
+                                <span class="tech-stack-tags">Stack: HTML5, CSS, JS, Responsive Design</span>
+                                <a href="https://pasteleriakmdemo.netlify.app/" target="_blank" class="cta-link-secondary">
+                                    Ver Caso de Estudio <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
-                    </a>
-                    <a href="https://www.cleanenergylocal.com/" target="_blank" class="portfolio-card">
-                        <div class="portfolio-card-image">
-                            <img src="clean.gif" alt="GIF del proyecto Clean Energy Local">
+
+                        <div class="project-image-box">
+                            <img src="cake.gif" alt="GIF de una repostería" />
+                            <div class="decorative-shape shape-accent-large"></div>
                         </div>
-                        <div class="portfolio-card-content">
-                            <h4>Clean Energy Local</h4>
-                            <p>Sitio web informativo para una organización de impacto ambiental, con un diseño limpio y accesible.</p>
-                            <div class="card-tags">
-                                <span>Informativo</span>
-                                <span>WordPress</span>
+                    </article>
+
+                     <article class="project-highlight-card layout-left">
+                        <div class="project-image-box">
+                            <img src="clean.gif" alt="GIF del proyecto Clean Energy Local" />
+                            <div class="decorative-shape shape-accent-small"></div>
+                        </div>
+                        
+                        <div class="project-content-box">
+                            <span class="project-type-tag tag-web-ui">UX/UI & Desarrollo CMS</span>
+                            <h3>Clean Energy Local</h3>
+                            
+                            <div class="info-blocks-grid">
+                                <div class="info-block block-challenge">
+                                    <h4>Reto</h4>
+                                    <p>Detecté que el problema principal era la dificultad de los usuarios para encontrar información relevante, afectando la usabilidad general.</p>
+                                </div>
+                                <div class="info-block block-role">
+                                    <h4>Implementación</h4>
+                                    <p>Rediseño UX/UI, Implementación de APIs de Google Maps y customizaciones de PHP en el CMS.</p>
+                                </div>
+                            </div>
+
+                            <p class="project-description">Implementé una nueva interfaz de búsqueda visual y optimicé las páginas internas del CMS con PHP. El resultado es una plataforma interactiva e intuitiva.</p>
+                            
+                            <div class="project-actions">
+                                <span class="tech-stack-tags">Stack: PHP, Google Maps API, CMS Customization</span>
+                                <a href="https://www.cleanenergylocal.com/" target="_blank" class="cta-link-secondary">
+                                    Ver Proyecto en Vivo <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
-                    </a>
-                    <a href="https://mayblog-sooty.vercel.app/" target="_blank" class="portfolio-card">
-                        <div class="portfolio-card-image">
-                            <img src="blog.gif" alt="GIF de un blog personal">
-                        </div>
-                        <div class="portfolio-card-content">
-                            <h4>Blog Personal</h4>
-                            <p>Diseño y maquetación de un blog con una estética vintage, enfocado en la legibilidad y el estilo.</p>
-                            <div class="card-tags">
-                                <span>Blog</span>
-                                <span>Diseño</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://bdbhomepage.netlify.app/" target="_blank" class="portfolio-card">
-                        <div class="portfolio-card-image">
-                            <img src="bdbd.gif" alt="GIF del proyecto BDBlocks">
-                        </div>
-                        <div class="portfolio-card-content">
-                            <h4>BDBlocks - Tools</h4>
-                            <p>Sitio web y plataforma de venta para un conjunto de herramientas para directorios web.</p>
-                            <div class="card-tags">
-                                <span>SaaS</span>
-                                <span>Directorio</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://escuelademanejomurillo.info/" target="_blank" class="portfolio-card">
-                        <div class="portfolio-card-image">
-                            <img src="school.gif" alt="GIF del proyecto Escuela de Manejo">
-                        </div>
-                        <div class="portfolio-card-content">
-                            <h4>Escuela de Manejo Murillo</h4>
-                            <p>Web para un negocio local, optimizada para la captación de clientes y contacto rápido vía WhatsApp.</p>
-                            <div class="card-tags">
-                                <span>Negocio Local</span>
-                                <span>Lead Gen</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://pasteleriakmdemo.netlify.app/" target="_blank" class="portfolio-card">
-                        <div class="portfolio-card-image">
-                            <img src="cake.gif" alt="GIF de una repostería">
-                        </div>
-                        <div class="portfolio-card-content">
-                            <h4>Repostería KM</h4>
-                            <p>Página web para un emprendimiento de pastelería, con galería de productos y formulario de pedidos.</p>
-                            <div class="card-tags">
-                                <span>Emprendimiento</span>
-                                <span>One Page</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://www.weddingwin.ca/wedding_search?sid=8" target="_blank" class="portfolio-card">
-                        <div class="portfolio-card-image">
-                            <img src="winc.gif" alt="GIF del proyecto Wedding Winc">
-                        </div>
-                        <div class="portfolio-card-content">
-                            <h4>Wedding Winc</h4>
-                            <p>Optimización de la página de resultados de búsqueda para un directorio de bodas, mejorando la UI/UX.</p>
-                            <div class="card-tags">
-                                <span>UI/UX</span>
-                                <span>Directorio</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" target="_blank" class="portfolio-card">
-                        <div class="portfolio-card-image">
-                            <img src="pinny.gif" alt="GIF de una tienda de pines">
-                        </div>
-                        <div class="portfolio-card-content">
-                            <h4>E-Commerce "Pinny"</h4>
-                            <p>Modelo de tienda online para la venta de pines y productos de colección, con carrito de compras integrado.</p>
-                            <div class="card-tags">
-                                <span>E-commerce</span>
-                                <span>Shopping</span>
-                            </div>
-                        </div>
+                    </article>
+                    
+                </div>
+                
+                <div class="portfolio-actions">
+                    <a href="projects.html" class="main-cta-button">
+                        Ver Todos Mis Proyectos <i class="fas fa-arrow-alt-circle-right"></i>
                     </a>
                 </div>
+                
             </div>
         </section>
-
-        <section class="process" id="process">
-            <div class="container">
-                <h2 class="section-title">El Camino Hacia tu Nueva Web</h2>
-                <div class="process-steps">
-                    <div class="step">
-                        <div class="step-icon"><i class="fas fa-comments"></i></div>
-                        <h3>1. Agenda y Estrategia</h3>
-                        <p>Comenzamos con una consulta para comprender tus objetivos y necesidades, y así poder brindarte un presupuesto personalizado.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-icon"><i class="fas fa-magic"></i></div>
-                        <h3>2. Diseño y Creación</h3>
-                        <p>Con los materiales listos, iniciaré el diseño de tu sitio. Te enviaré avances semanales para asegurarnos de que ames el resultado.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-icon"><i class="fas fa-rocket"></i></div>
-                        <h3>3. Lanzamiento y Soporte</h3>
-                        <p>Lanzaremos tu web y te guiaré con una capacitación y tutoriales para que aprendas a manejarla sin problemas.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="about" id="about">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2><i class="fas fa-user-astronaut" style="color: var(--color-principal); margin-right: 10px;"></i>Desde Costa Rica, creamos experiencias digitales que inspiran.</h2>
-                        <p class="about-description">Tu página web es tu carta de presentación: debe ser clara, funcional y visualmente atractiva. Creamos One Pages personalizadas que muestran lo esencial para tus clientes: lo que haces, cuánto cuesta, cómo contactarte y por qué elegirte.</p>
-                        <p class="about-description">Diseñamos con propósito: cada sitio refleja la esencia de tu marca y facilita que tus clientes tomen acción. Hemos trabajado con marcas grandes y pequeñas para proyectar ideas de forma creativa, estratégica y efectiva.</p>
-                    </div>
-                    <div class="about-image">
-                        <div class="profile-card">
-                            <img src="newlogo.png" alt="Foto de May" class="profile-avatar">
-                            <div class="profile-name">May</div>
-                            <div class="profile-title">Creative Developer & Designer</div>
-                            <div class="profile-location">Costa Rica <i class="fas fa-flag"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="final-cta" id="final-cta">
-    <div class="cta-with-images">
-        <div class="cta-image-left">
-        <img src="/izquierda.png" alt="Decoración izquierda" />
-        </div>
-
-        <div class="cta-content">
-        <h2><i class="fas fa-globe"></i> ¿Tienes una marca pero aún no brillas en internet?</h2>
-        <p>
-            El 81% de tus clientes buscan en línea antes de comprar. Si no te encuentran, encontrarán a tu competencia.
-        </p>
-        <p>
-            No necesitas conocimientos técnicos. Cuéntame sobre tu marca y te ayudaré a destacar en el mundo digital.
-        </p>
-        <a href="#contact" class="cta-button">
-            <i class="fas fa-paper-plane"></i> Quiero llevar mi marca al mundo digital
-        </a>
-        </div>
-
-        <div class="cta-image-right">
-        <img src="/derecha.png" alt="Decoración derecha" />
-        </div>
-    </div>
-</section>
-
-
-
+        
         <section class="contact" id="contact">
             <div class="container">
-                <h2 class="section-title">¡Conectemos!</h2>
-                <p class="section-subtitle">¿Tienes un proyecto en mente? ¿Listo para darle vida a tu nueva web? ¡Me encantaría saber de ti!</p>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3 class="section-subtitle">Información de Contacto</h3>
-                        <div class="contact-links">
-                            <a href="mailto:mayspacede@gmail.com"><i class="fas fa-envelope"></i> mayspacede@gmail.com</a>
-                            <a href="https://discord.com/users/alistorm6708"><i class="fab fa-discord"></i> Discord</a>
-                            <a href="https://x.com/MaySpacedu"><i class="fab fa-twitter"></i> Twitter</a>
-                            <a href="https://github.com/MaySpaceDu"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://www.instagram.com/mayspace_du/"><i class="fab fa-instagram"></i> Instagram</a>
-                        </div>
-                    </div>
-                    <div class="contact-form">
-                        <h3>Envíame un Mensaje</h3>
-                        <form id="contact-form">
+                
+                <h2 class="section-title">¿LISTO PARA EL DESPEGUE?</h2>
+                
+                <div class="contact-content-simplified">
+                    
+                    <div class="contact-form-card">
+                        <h3 class="contact-card-title">Envíame un Mensaje Directo</h3>
+                        <form id="contact-form-simplified">
                             <div class="form-group">
-                                <label for="name">Nombre</label>
-                                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                                <label for="name-contact">Nombre</label>
+                                <input type="text" id="name-contact" name="name" placeholder="Tu nombre" required>
                             </div>
                             <div class="form-group">
-                                <label for="email">Correo Electrónico</label>
-                                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                                <label for="email-contact">Correo Electrónico</label>
+                                <input type="email" id="email-contact" name="email" placeholder="Tu correo electrónico" required>
                             </div>
                             <div class="form-group">
-                            <label for="project">Servicio de Interés</label>
-                            <select id="project" name="project" required>
-                                <option value="" disabled selected>Selecciona un servicio...</option>
-                                <option value="Web OPS (One Page)">Web OPS (One Page)</option>
-                                <option value="Diseño One Page">Diseño One Page</option>
-                                <option value="Diseño Web Pro">Diseño Web Pro</option>
-                                <option value="E-commerce / Plataforma">E-commerce / Plataforma</option>
-                                <option value="Identidad de Marca">Identidad de Marca</option>
-                                <option value="Contenido para Redes">Contenido para Redes</option>
-                                <option value="Otro">Otro / Consulta General</option>
-                            </select>
-                        </div>
-                            <div class="form-group">
-                                <label for="message">Mensaje</label>
-                                <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                                <label for="message-contact">Mensaje</label>
+                                <textarea id="message-contact" name="message" placeholder="Cuéntame sobre la oportunidad..." required rows="4"></textarea>
                             </div>
-                            <button type="submit" class="submit-button"><i class="fas fa-paper-plane"></i> Enviar Mensaje</button>
+                            
+                            <button type="submit" class="submit-button">
+                                <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                            </button>
                         </form>
                     </div>
+
+                    <div class="contact-image-card">
+                        <img src="diseno.png" alt="Ilustración animada de Mery Vega M recibiendo un mensaje" class="contact-animated-illustration" />
+                        <p class="contact-image-caption">¡Gracias por tu visita! Siempre abierta a nuevas oportunidades.</p>
+                    </div>
+
                 </div>
             </div>
         </section>
-    </main>
 
-    <footer>
+    </main>
+    
+    <footer class="final-thank-you">
         <div class="container">
-            <p>© 2025 MaySpaceDev. Creado con <i class="fas fa-heart"></i> y mucho café en Costa Rica.</p>
+
+            <div class="thank-you-title-container">
+                <h1 class="thank-you-title">GRACIAS</h1>
+                
+                <div class="decorative-star star-accent"><i class="fas fa-star"></i></div>
+                <div class="decorative-shape shape-abstract"><i class="fas fa-star"></i></div>
+            </div>
+
+            <div class="contact-line-separator">
+                <span class="separator-text">CONTACTO</span>
+            </div>
+
+            <div class="footer-contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i> meryvega506@gmail.com
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i> (506) 7053 - 8091
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-gitlab"></i> @meryvega506
+                </div>
+            </div>
+            
+            <p class="footer-copyright">
+                © 2025 PORTAFOLIO CREADO POR MERY VEGA M. Todos los derechos reservados.
+            </p>
         </div>
     </footer>
-
-   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        
-        // Toggle del menú hamburguesa con cambio de icono
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            // Cambiar icono según el estado del menú
-            hamburger.innerHTML = navLinks.classList.contains('active')
-                ? '<i class="fas fa-times"></i>'
-                : '<i class="fas fa-bars"></i>';
-        });
-
-        // Cerrar menú móvil al hacer clic en un enlace
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            // --- NAVEGACIÓN Y HAMBURGUESA ---
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.innerHTML = navLinks.classList.contains('active')
+                    ? '<i class="fas fa-times"></i>'
+                    : '<i class="fas fa-bars"></i>';
             });
-        });
 
-        // Efecto scroll en header
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                });
+            });
+
+            // --- EFECTO SCROLL EN HEADER ---
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             header.classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // --- LÓGICA PARA FORMULARIO DE CONTACTO CON EMAILJS ---
-        emailjs.init('wvau8hp3Vcy9Qf_mP'); // Tu User ID de EmailJS
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-                emailjs.sendForm('service_btdz3ry', 'template_c1y027u', this) // Tu Service ID y Template ID
-                    .then(() => {
-                        Swal.fire('¡Mensaje Enviado!', 'Gracias por contactarme, te responderé pronto.', 'success');
-                        contactForm.reset();
-                    }, (error) => {
-                        Swal.fire('Error', 'Hubo un problema al enviar el mensaje. Inténtalo de nuevo.', 'error');
-                    });
-            });
-        }
+            // --- FORMULARIO DE CONTACTO CON EMAILJS ---
+            emailjs.init('wvau8hp3Vcy9Qf_mP'); 
 
-        // --- LÓGICA PARA EL CARRUSEL DE DISEÑOS POPULARES ---
-        const track = document.querySelector('.carousel-track');
-        if (track) { 
-            const slides = Array.from(track.children);
-            const nextButton = document.querySelector('.carousel-button.next');
-            const prevButton = document.querySelector('.carousel-button.prev');
+            const contactFormSimplified = document.getElementById('contact-form-simplified');
             
-            let slideWidth = 0;
-            let currentIndex = 0;
-
-            const updateSlideWidth = () => {
-                if (slides.length > 0) {
-                   slideWidth = slides[0].getBoundingClientRect().width;
-                }
+            if (contactFormSimplified) {
+                contactFormSimplified.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    emailjs.sendForm('service_btdz3ry', 'template_c1y027u', this) 
+                        .then(() => {
+                            Swal.fire('¡Mensaje Enviado!', 'Gracias por contactarme, te responderé pronto.', 'success');
+                            contactFormSimplified.reset();
+                        }, (error) => {
+                            Swal.fire('Error', 'Hubo un problema al enviar el mensaje. Inténtalo de nuevo.', 'error');
+                            console.error('Error al enviar:', error);
+                        });
+                });
             }
 
-            const updateCarousel = () => {
-                if (!track) return;
-                track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-                
-                // Lógica para habilitar/deshabilitar botones
-                prevButton.disabled = currentIndex === 0;
-
-                const slidesInView = Math.round(track.parentElement.offsetWidth / slideWidth);
-                nextButton.disabled = currentIndex >= slides.length - slidesInView;
-            }
-
-            nextButton.addEventListener('click', () => {
-                currentIndex++;
-                updateCarousel();
-            });
-
-            prevButton.addEventListener('click', () => {
-                currentIndex--;
-                updateCarousel();
-            });
-
-            window.addEventListener('resize', () => {
-                updateSlideWidth();
-                updateCarousel();
-            });
-            
-            setTimeout(() => {
-                updateSlideWidth();
-                updateCarousel();
-            }, 100);
-        }
-    });
-</script>
+        });
+    </script>
 </body>
 </html>
