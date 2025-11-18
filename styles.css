@@ -961,7 +961,7 @@ header.scrolled {
     }
 }
 
-/* --- ESTILOS PARA LA NUEVA TARJETA DE INTERESES/HOBBIES (Tags) --- */
+/* --- ESTILOS PARA LA  TARJETA DE INTERESES/HOBBIES (Tags) --- */
 
 .hobbies-tags-list {
     display: inline-flex;
@@ -992,7 +992,7 @@ header.scrolled {
     background-color: var(--color-); 
     cursor: default;
 }
-/* Ajuste para que la tarjeta de habilidades se vea mejor en móvil (si es necesario) */
+
 @media (max-width: 500px) {
     .hobby-tag {
         font-size: 0.8rem;
