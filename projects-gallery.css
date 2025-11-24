@@ -1,0 +1,263 @@
+/* --- ESTILOS PARA TARJETAS DE DESTAQUE DE PROYECTOS (NEW FORMAT) --- */
+
+/* --- 1. VARIABLES Y RESET BÁSICO --- */
+
+:root {
+    /* Paleta Monocromática */
+    --color-principal: #A58FD0; /* ¡NUEVO COLOR! Morado Lavanda Intenso */ 
+    --color-fondo-claro: #F5F5F5; 
+    --color-texto-oscuro: #222222; 
+    --color-texto-claro: #4A4A4A; 
+
+    /* Tipografía */
+    --font-heading: 'Balsamiq Sans', cursive;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-texto-oscuro);
+    line-height: 1.6;
+    background-color: var(--color-fondo-claro);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-principal);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-texto-oscuro);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 2. ESTILOS BASE DE SECCIÓN --- */
+
+section {
+    padding: 80px 0;
+    width: 100%;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--color-texto-claro);
+    margin-bottom: 40px;
+}
+
+
+
+.project-highlight-card {
+    grid-column: 1 / -1; 
+    
+    display: flex;
+    flex-direction: column; 
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    padding: 30px; 
+    margin-bottom: 30px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* 2. CAJA DE LA IMAGEN */
+.project-highlight-card .project-image-box {
+    position: relative;
+    /* Eliminamos el padding redundante, mejor usar el padding del .project-highlight-card */
+    margin-bottom: 20px; 
+}
+.project-highlight-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    z-index: 2;
+    position: relative;
+    /* Transición suave para cualquier efecto hover en la imagen si se agrega */
+    transition: transform 0.3s ease; 
+}
+
+/* Estilo para formas decorativas (si las usas) */
+.project-highlight-card .decorative-shape {
+    position: absolute;
+    /* Define la posición y el estilo del shape */
+}
+
+/* 3. CAJA DEL CONTENIDO */
+.project-highlight-card .project-content-box {
+    padding: 0; /* Ya no necesita padding, el contenedor principal lo maneja */
+}
+
+/* 4. ELEMENTOS DE TEXTO */
+.project-highlight-card .project-type-tag {
+    display: inline-block;
+    background-color: var(--color-principal); /* Usamos principal para el tag principal */
+    color: white;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.logo {
+    display: flow;
+    align-items: center;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-texto-oscuro);
+}
+
+.project-highlight-card h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem; 
+    color: var(--color-texto-oscuro);
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.project-highlight-card .project-description {
+    margin-bottom: 25px;
+    color: var(--color-texto-claro);
+}
+
+/* 5. BLOQUES DE INFORMACIÓN (Retos/Roles/Claves) */
+.project-highlight-card .info-blocks-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.project-highlight-card .info-block {
+    background-color: var(--color-fondo-claro);
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid var(--color-principal); 
+}
+.project-highlight-card .info-block h4 {
+    color: var(--color-principal);
+    font-size: 1.0rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.project-highlight-card .info-block p {
+    font-size: 0.95rem;
+    color: var(--color-texto-claro);
+}
+
+/* 6. ACCIONES Y STACK */
+.project-highlight-card .project-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 15px;
+
+}
+
+.project-highlight-card .tech-stack-tags {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-texto-claro);
+}
+
+/* Botón CTA Secundario (Estilo de enlace con flecha) */
+.project-highlight-card .cta-link-secondary {
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.project-highlight-card .cta-link-secondary i {
+    transition: transform 0.3s ease;
+}
+.project-highlight-card .cta-link-secondary:hover i {
+    transform: translateX(5px);
+}
+
+/* ========================================= */
+/* 7. MEDIA QUERY PARA DISPOSICIÓN ASIMÉTRICA EN DESKTOP */
+/* ========================================= */
+@media (min-width: 992px) {
+    .project-highlight-card {
+        flex-direction: row; /* Coloca la imagen y el contenido en fila */
+        min-height: 450px;
+        align-items: center;
+        padding: 50px;
+    }
+
+    .project-highlight-card h3 {
+        font-size: 2.5rem; 
+    }
+    
+    /* Configuración de las dos columnas de 50% */
+    .project-highlight-card .project-image-box,
+    .project-highlight-card .project-content-box {
+        width: 50%;
+    }
+
+    /* 7a. Layout por defecto (layout-left: Imagen a la Izquierda) */
+    .project-highlight-card.layout-left .project-image-box {
+        order: 1;
+        padding-right: 50px; /* Espacio entre imagen y texto */
+        padding-left: 0;
+    }
+    .project-highlight-card.layout-left .project-content-box {
+        order: 2;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    /* 7b. Layout alterno (layout-right: Imagen a la Derecha) */
+    .project-highlight-card.layout-right .project-image-box {
+        order: 2; /* Mueve la imagen a la derecha */
+        padding-left: 50px; /* Espacio entre texto e imagen */
+        padding-right: 0;
+    }
+    .project-highlight-card.layout-right .project-content-box {
+        order: 1; /* Mueve el texto a la izquierda */
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* Mejora del grid de información en desktop */
+    .project-highlight-card .info-blocks-grid {
+        grid-template-columns: 1fr 1fr; /* Desktop: 2 columnas */
+    }
+
+    .project-highlight-card .project-actions {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
