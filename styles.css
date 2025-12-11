@@ -1,8 +1,7 @@
 /* --- 1. VARIABLES Y RESET BÁSICO --- */
 
 :root {
-    /* Paleta Monocromática */
-    --color-principal: #A58FD0; /* ¡NUEVO COLOR! Morado Lavanda Intenso */ 
+    --color-principal: #A58FD0;
     --color-fondo-claro: #F5F5F5; 
     --color-texto-oscuro: #222222; 
     --color-texto-claro: #4A4A4A; 
@@ -185,7 +184,6 @@ header.scrolled {
             height: auto;
             transition: transform 0.5s ease;
             filter: grayscale(20%) contrast(110%);
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
         
         .hero-image-container:hover img {
@@ -275,7 +273,6 @@ header.scrolled {
 
 /* --- ESTILOS DE RESALTE DENTRO DEL PÁRRAFO --- */
 
-/* Resalte Principal (Color de Acento y Borde) */
 .highlight-accent {
     color: white; /* Blanco para que destaque en el fondo oscuro */
     font-weight: 600; 
@@ -487,7 +484,7 @@ header.scrolled {
         margin-top: 0 !important; 
         max-width: 80%;
         padding: 0;
-        display: flex; /* El icono estará a la izquierda, el texto a la derecha */
+        display: flex; 
         gap: 15px;
         text-align: left;
     }

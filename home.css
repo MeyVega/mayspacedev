@@ -1,8 +1,7 @@
 /* --- 1. VARIABLES Y RESET BÁSICO --- */
 
 :root {
-    /* Paleta Monocromática */
-    --color-principal: #A58FD0; /* ¡NUEVO COLOR! Morado Lavanda Intenso */ 
+    --color-principal: #A58FD0; 
     --color-fondo-claro: #F5F5F5; 
     --color-texto-oscuro: #222222; 
     --color-texto-claro: #4A4A4A; 
@@ -73,7 +72,6 @@ header {
     z-index: 1000;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease; /* Aseguramos que el padding tenga transición */
     
-    /* 1. Definimos la altura base aquí, usando un padding generoso */
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -82,7 +80,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* 2. ELIMINAMOS EL PADDING DE ESTA CLASE PARA EVITAR CONFLICTOS */
     padding: 0 20px; 
 }
 
@@ -90,9 +87,8 @@ header.scrolled {
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
-    
-    /* 3. Reducimos el padding para que se "encoga" al hacer scroll */
     padding-top: 10px;
+    height: 60px;
     padding-bottom: 10px;
 }
 
@@ -136,7 +132,7 @@ header.scrolled {
         width: 100%;
         text-align: center;
         position: absolute;
-        top: 65px; /* Ajustar según la altura del header */
+        top: 65px; 
         left: 0;
         background-color: white;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
@@ -161,11 +157,11 @@ header.scrolled {
 /* --- 4. SECCIÓN HERO (HOMES) --- */
         .hero-image-only {
             background-color: var(--color-fondo-claro);
-            height: 100vh;
-            display: flex;
+           /*  height: 100vh;
+            display: flex; */
             align-items: center;
-            justify-content: center;
-            padding: 20px 0;
+           /*  justify-content: center;
+            padding: 20px 0; */
         }
         
         .container {
@@ -190,7 +186,6 @@ header.scrolled {
             height: auto;
             transition: transform 0.5s ease;
             filter: grayscale(20%) contrast(110%);
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
         
         .hero-image-container:hover img {
@@ -231,7 +226,7 @@ header.scrolled {
     line-height: 1.2;
 }
 
-/* Animación de Rebote para la Estrella */
+
 @keyframes subtle-bounce {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
@@ -277,9 +272,9 @@ header.scrolled {
 
 /* --- ESTILOS DE RESALTE DENTRO DEL PÁRRAFO --- */
 
-/* Resalte Principal (Color de Acento y Borde) */
+
 .highlight-accent {
-    color: white; /* Blanco para que destaque en el fondo oscuro */
+    color: white; 
     font-weight: 600; 
     border-bottom: 2px dashed white; 
     transition: all 0.3s ease-in-out;
@@ -287,10 +282,9 @@ header.scrolled {
 }
 .highlight-accent:hover {
     border-bottom: 2px solid var(--color-texto-oscuro);
-    color: var(--color-texto-oscuro); /* Cambia a negro para un efecto de 'flash' */
+    color: var(--color-texto-oscuro);
 }
 
-/* Resalte Secundario (Fondo Sutil) */
 .highlight-subtle {
     font-weight: 600;
     /* color: var(--color-texto-oscuro); */ /* Texto oscuro */
@@ -771,7 +765,7 @@ header.scrolled {
 /* --- 9. SECCIÓN CONTACTO (#contact) --- */
 
 .contact {
-    background-color: var(--color-fondo-claro); /* Fondo claro para el contraste final */
+    background-color: var(--color-fondo-claro); 
 }
 
 .contact .section-title {
@@ -992,7 +986,6 @@ header.scrolled {
     background-color: var(--color-); 
     cursor: default;
 }
-/* Ajuste para que la tarjeta de habilidades se vea mejor en móvil (si es necesario) */
 @media (max-width: 500px) {
     .hobby-tag {
         font-size: 0.8rem;

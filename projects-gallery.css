@@ -1,15 +1,9 @@
-/* --- ESTILOS PARA TARJETAS DE DESTAQUE DE PROYECTOS (NEW FORMAT) --- */
-
-/* --- 1. VARIABLES Y RESET BÁSICO --- */
-
 :root {
-    /* Paleta Monocromática */
-    --color-principal: #A58FD0; /* ¡NUEVO COLOR! Morado Lavanda Intenso */ 
+    --color-principal: #A58FD0;
     --color-fondo-claro: #F5F5F5; 
     --color-texto-oscuro: #222222; 
     --color-texto-claro: #4A4A4A; 
 
-    /* Tipografía */
     --font-heading: 'Balsamiq Sans', cursive;
     --font-body: 'Poppins', sans-serif;
 }
@@ -43,8 +37,6 @@ a:hover {
     padding: 0 20px;
 }
 
-/* --- 2. ESTILOS BASE DE SECCIÓN --- */
-
 section {
     padding: 80px 0;
     width: 100%;
@@ -65,11 +57,8 @@ section {
     margin-bottom: 40px;
 }
 
-
-
 .project-highlight-card {
     grid-column: 1 / -1; 
-    
     display: flex;
     flex-direction: column; 
     background-color: white;
@@ -86,12 +75,11 @@ section {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* 2. CAJA DE LA IMAGEN */
 .project-highlight-card .project-image-box {
     position: relative;
-    /* Eliminamos el padding redundante, mejor usar el padding del .project-highlight-card */
     margin-bottom: 20px; 
 }
+
 .project-highlight-card img {
     width: 100%;
     height: auto;
@@ -99,25 +87,20 @@ section {
     border-radius: 8px;
     z-index: 2;
     position: relative;
-    /* Transición suave para cualquier efecto hover en la imagen si se agrega */
     transition: transform 0.3s ease; 
 }
 
-/* Estilo para formas decorativas (si las usas) */
 .project-highlight-card .decorative-shape {
     position: absolute;
-    /* Define la posición y el estilo del shape */
 }
 
-/* 3. CAJA DEL CONTENIDO */
 .project-highlight-card .project-content-box {
-    padding: 0; /* Ya no necesita padding, el contenedor principal lo maneja */
+    padding: 0;
 }
 
-/* 4. ELEMENTOS DE TEXTO */
 .project-highlight-card .project-type-tag {
     display: inline-block;
-    background-color: var(--color-principal); /* Usamos principal para el tag principal */
+    background-color: var(--color-principal);
     color: white;
     padding: 4px 10px;
     border-radius: 5px;
@@ -149,7 +132,6 @@ section {
     color: var(--color-texto-claro);
 }
 
-/* 5. BLOQUES DE INFORMACIÓN (Retos/Roles/Claves) */
 .project-highlight-card .info-blocks-grid {
     display: grid;
     grid-template-columns: 1fr; 
@@ -163,18 +145,19 @@ section {
     border-radius: 10px;
     border-left: 4px solid var(--color-principal); 
 }
+
 .project-highlight-card .info-block h4 {
     color: var(--color-principal);
     font-size: 1.0rem;
     font-weight: 600;
     margin-bottom: 5px;
 }
+
 .project-highlight-card .info-block p {
     font-size: 0.95rem;
     color: var(--color-texto-claro);
 }
 
-/* 6. ACCIONES Y STACK */
 .project-highlight-card .project-actions {
     display: flex;
     flex-direction: column;
@@ -182,7 +165,6 @@ section {
     gap: 15px;
     margin-top: 20px;
     padding-top: 15px;
-
 }
 
 .project-highlight-card .tech-stack-tags {
@@ -191,26 +173,24 @@ section {
     color: var(--color-texto-claro);
 }
 
-/* Botón CTA Secundario (Estilo de enlace con flecha) */
 .project-highlight-card .cta-link-secondary {
     font-weight: 600;
     display: inline-flex;
     align-items: center;
     gap: 8px;
 }
+
 .project-highlight-card .cta-link-secondary i {
     transition: transform 0.3s ease;
 }
+
 .project-highlight-card .cta-link-secondary:hover i {
     transform: translateX(5px);
 }
 
-/* ========================================= */
-/* 7. MEDIA QUERY PARA DISPOSICIÓN ASIMÉTRICA EN DESKTOP */
-/* ========================================= */
 @media (min-width: 992px) {
     .project-highlight-card {
-        flex-direction: row; /* Coloca la imagen y el contenido en fila */
+        flex-direction: row;
         min-height: 450px;
         align-items: center;
         padding: 50px;
@@ -220,39 +200,37 @@ section {
         font-size: 2.5rem; 
     }
     
-    /* Configuración de las dos columnas de 50% */
     .project-highlight-card .project-image-box,
     .project-highlight-card .project-content-box {
         width: 50%;
     }
 
-    /* 7a. Layout por defecto (layout-left: Imagen a la Izquierda) */
     .project-highlight-card.layout-left .project-image-box {
         order: 1;
-        padding-right: 50px; /* Espacio entre imagen y texto */
+        padding-right: 50px;
         padding-left: 0;
     }
+
     .project-highlight-card.layout-left .project-content-box {
         order: 2;
         padding-left: 0;
         padding-right: 0;
     }
     
-    /* 7b. Layout alterno (layout-right: Imagen a la Derecha) */
     .project-highlight-card.layout-right .project-image-box {
-        order: 2; /* Mueve la imagen a la derecha */
-        padding-left: 50px; /* Espacio entre texto e imagen */
+        order: 2;
+        padding-left: 50px;
         padding-right: 0;
     }
+
     .project-highlight-card.layout-right .project-content-box {
-        order: 1; /* Mueve el texto a la izquierda */
+        order: 1;
         padding-right: 0;
         padding-left: 0;
     }
 
-    /* Mejora del grid de información en desktop */
     .project-highlight-card .info-blocks-grid {
-        grid-template-columns: 1fr 1fr; /* Desktop: 2 columnas */
+        grid-template-columns: 1fr 1fr;
     }
 
     .project-highlight-card .project-actions {
