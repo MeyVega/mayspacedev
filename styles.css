@@ -468,53 +468,64 @@ header.scrolled {
 }
 
 @media (max-width: 768px) {
+
+    /* Reduce padding superior e inferior */
+    .wavy-timeline-container {
+        padding: 20px 0 10px 0;
+    }
+
+    /* La línea desaparece */
     .wavy-line {
         display: none;
     }
 
+    /* Los puntos van en columna, bien centrados */
     .timeline-points-grid {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
-        gap: 30px;
-        padding-bottom: 20px;
+        gap: 25px;
     }
 
-    /* Aplica Flexbox para alinear el icono a la izquierda con el texto */
+    /* Quitar márgenes forzados en desktop */
     .timeline-point {
-        margin-top: 0 !important; 
-        max-width: 80%;
-        padding: 0;
-        display: flex; 
-        gap: 15px;
-        text-align: left;
+        margin: 0 !important;
+        max-width: 280px; /* mantiene un ancho elegante en móvil */
     }
 
+    /* Iconos un poco más pequeños */
     .point-icon-large {
-        flex-shrink: 0; 
-        align-self: flex-start;
-        margin-bottom: 0;
         width: 35px;
         height: 35px;
-    }
-
-    .timeline-point h3 {
-        margin: 0; 
         font-size: 1.2rem;
-        text-align: center;
+        box-shadow: 0 0 0 4px white;
     }
 
-    .timeline-point p {
-        margin-top: 3px; 
+    .point-icon-large i {
         font-size: 0.9rem;
     }
 
+    /* Títulos */
+    .timeline-point h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Texto */
+    .timeline-point p {
+        font-size: 0.85rem;
+        line-height: 1.3;
+    }
+
+    /* Leyenda final más compacta */
     .legend-bar {
-        margin-top: 30px;
-        flex-direction: column;
+        margin-top: 20px;
+        padding-top: 10px;
+        flex-direction: row-reverse;
         gap: 10px;
-        text-align: left;
+        font-size: 0.85rem;
+        text-align: center;
     }
 }
+
 
 /* --- 7. HABILIDADES Y CV (#education-skills) --- */
 
@@ -850,7 +861,7 @@ header.scrolled {
     .project-actions {
         flex-direction: column;        
         align-items: flex-start;       
-        gap: 6px;                    
+        gap: 15px;                    
         margin-top: 18px;
     }
 
@@ -861,6 +872,30 @@ header.scrolled {
         line-height: 1.4;
     }
 }
+/* --- Ajustes SOLO para móvil --- */
+@media (max-width: 768px) {
+    .hero-image-only {
+        height: auto;        /* Quita el 100vh en móvil */
+        padding: 80px 0 80px; /* Ajusta padding para que se vea bonito */
+        display: block;      /* Evita estiramiento por flexbox */
+    }
+
+    .container {
+        max-width: 95%;
+        padding: 0 10px;
+    }
+
+    .hero-image-container {
+        max-height: 350px;   /* opcional, controla altura de imagen */
+        overflow: hidden;
+    }
+
+    .hero-image-container img {
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
 
 
 
@@ -1094,6 +1129,11 @@ header.scrolled {
     .hobby-tag {
         font-size: 0.8rem;
         padding: 5px 10px;
+    }
+}
+@media (max-width: 768px) {
+    .hobbies-tags-list {
+        justify-content: center;
     }
 }
 
