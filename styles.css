@@ -65,14 +65,18 @@ section {
 /* --- 3. HEADER Y NAVEGACIÓN --- */
 
 header {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease; 
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 16px 0; 
+    background-color: white;
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+
+    transform-origin: top center;
+    will-change: transform;
 }
 
 .header-nav {
@@ -83,12 +87,11 @@ header {
 }
 
 header.scrolled {
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+   background-color: rgba(255, 255, 255, 0.95);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transform: scaleY(0.9); 
+   
+} 
 
 .logo {
     display: flex;
